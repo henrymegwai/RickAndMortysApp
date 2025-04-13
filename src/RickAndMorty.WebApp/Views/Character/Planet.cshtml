@@ -1,0 +1,35 @@
+@model RickAndMorty.WebApp.ViewModels.CharacterViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+
+    <div class="mb-3">
+        <a asp-controller="Character" asp-action="Planets" class="btn btn-primary"><< Back</a>
+    </div>
+
+    <div class="row">
+        @foreach (var character in Model.Characters)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@character.Image" class="card-img-top" alt="@character.Name">
+                    <div class="card-body">
+                        <h5 class="card-title"><a asp-controller="Character" asp-action="GetByName" asp-route-name="@character.Name">@character.Name</a></h5>
+                        <p class="card-text">
+                            <strong>Status:</strong> @character.Status<br>
+                            <strong>Species:</strong> @character.Species<br>
+                            <strong>Species:</strong> @character.Gender<br>
+                            <strong>Species:</strong> @character.Created<br>
+                            <strong>Origin:</strong> @character.OriginName<br>
+                            <strong>Planet:</strong> @character.LocationName
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

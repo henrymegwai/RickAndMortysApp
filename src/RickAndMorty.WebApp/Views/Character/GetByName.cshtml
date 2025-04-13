@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+}
+
+@model RickAndMorty.WebApp.ViewModels.CharacterDetailsViewModel
+
+<div class="container">
+    <h1>@Model.Name</h1>
+    <img src="@Model.Image" alt="@Model.Name" class="img-fluid mb-3">
+    <p><strong>Status:</strong> @Model.Status</p>
+    <p><strong>Species:</strong> @Model.Species</p>
+    <p><strong>Gender:</strong> @Model.Gender</p>
+    <p><strong>Origin Name:</strong> @Model.OriginName</p>
+    <p><strong>Origin Url:</strong> @Model.OriginUrl</p>
+    <p><strong>Location Name:</strong> @Model.LocationName</p>
+    <p><strong>Location Url:</strong> @Model.LocationUrl</p>
+    <p><strong>Created:</strong> @Model.Created</p>
+    <a asp-controller="Character" asp-action="Planet" asp-route-name="@Model.LocationName" class="btn btn-primary"><< Back</a>
+</div>

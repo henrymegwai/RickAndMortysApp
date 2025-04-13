@@ -1,0 +1,19 @@
+@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "Character Planets";
+    Layout = "_Layout";
+}
+
+<div class="container" style="max-width: 500px; margin: 0 auto;">
+    <h1>@ViewData["Title"]</h1>
+
+    <ul class="list-group">
+        @foreach (var location in Model)
+        {
+            <li class="list-group-item">
+                <a asp-action="Planet" asp-route-name="@location">@location</a>
+            </li>
+        }
+    </ul>
+</div>

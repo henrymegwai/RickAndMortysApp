@@ -1,0 +1,27 @@
+﻿services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=changePassword123!
+      - MSSQL_USER=custom_user
+      - MSSQL_PASSWORD=changePassword123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+      - ./init-database.sql:/docker-entrypoint-initdb.d/init-database.sql
+
+  consoleapp:
+    build:
+      context: ./RickAndMortyConsoleApp
+      dockerfile: Dockerfile
+    depends_on:
+      - sqlserver
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=RickAndMortyDB;User=custom_user;Password=changePassword123!;
+    command: ["dotnet", "RickAndMortyConsoleApp.dll"]
+
+volumes:
+  sql_data:

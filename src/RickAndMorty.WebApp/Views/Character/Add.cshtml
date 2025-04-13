@@ -1,0 +1,89 @@
+@{
+    Layout = "_Layout";
+}
+
+@model RickAndMorty.Application.Models.CharacterModel
+
+<div class="container" style="max-width: 600px; margin: 0 auto;">
+    <h1>Add New Character</h1>
+
+    <form asp-action="Add" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Status"></label>
+            <input asp-for="Status" class="form-control" />
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Species"></label>
+            <input asp-for="Species" class="form-control" />
+            <span asp-validation-for="Species" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Gender"></label>
+            <input asp-for="Gender" class="form-control" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Type"></label>
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="OriginName"></label>
+            <input asp-for="OriginName" class="form-control" />
+            <span asp-validation-for="OriginName" class="text-danger"></span>
+        
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OriginUrl"></label>
+            <input asp-for="OriginUrl" class="form-control" />
+            <span asp-validation-for="OriginUrl" class="text-danger"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LocationName"></label>
+            <input asp-for="LocationName" class="form-control" />
+            <span asp-validation-for="LocationName" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="LocationUrl"></label>
+            <input asp-for="LocationUrl" class="form-control" />
+            <span asp-validation-for="LocationUrl" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="ImageUrl"></label>
+            <input asp-for="ImageUrl" class="form-control" />
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Url"></label>
+            <input asp-for="Url" class="form-control" />
+            <span asp-validation-for="Url" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Episodes"></label>
+            <textarea asp-for="Episodes" class="form-control"></textarea>
+            <span asp-validation-for="Episodes" class="text-danger"></span>
+
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Add Character</button>
+    </form>
+</div>
