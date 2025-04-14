@@ -21,12 +21,16 @@ The connection string is located in the Program.cs file. Follow these steps to u
 
 ## Running the Console App
 Follow these steps to run the console application:
+---
 Using Visual Studio
 1.	Open the solution in Visual Studio.
 2.	Set RickAndMortyConsoleApp as the Startup Project:
   - Right-click on the RickAndMortyConsoleApp project in the Solution Explorer.
   - Select Set as Startup Project.
 3.	Press F5 or click the Start button to run the application.
+---
 Using the Command Line
 1.	Open a terminal or command prompt.
 2.	Navigate to the RickAndMortyConsoleApp project directory:
+   - cd src/RickAndMortyConsoleApp
+   - dotnet run
