@@ -16,5 +16,6 @@
       <ProjectReference Include="..\RickAndMorty.Application\RickAndMorty.Application.csproj" />
       <ProjectReference Include="..\RickAndMorty.Data\RickAndMorty.Data.csproj" />
     </ItemGroup>
+    
 
 </Project>

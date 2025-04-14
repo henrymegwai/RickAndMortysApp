@@ -2,8 +2,6 @@ using DotNet.Testcontainers.Builders;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,10 +37,7 @@ public class TestWebApplicationFactory : WebApplicationFactory<Program>, IAsyncL
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(_msSqlContainer.GetConnectionString()));
-        });
-
-        builder.ConfigureTestServices(services =>
-        {
+            
             services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<Program>());
             services.AddMemoryCache();
             services.AddScoped<IMemoryCache, MemoryCache>();
@@ -52,7 +47,6 @@ public class TestWebApplicationFactory : WebApplicationFactory<Program>, IAsyncL
                 return new ApplicationDbContext(options);
             });
         });
-
         base.ConfigureWebHost(builder);
     }
 

@@ -7,7 +7,9 @@ using RickAndMorty.Application.Common.Enums;
 using RickAndMorty.Data.Entities;
 using RickAndMorty.Infrastructure.Services;
 using RickAndMorty.Infrastructure.Services.Response;
+using RickAndMorty.Tests.Application.Features.Character.Command;
 using Character = RickAndMorty.Data.Entities.Character;
+using ICharacterRepository = RickAndMorty.Application.Abstractions.ICharacterRepository;
 using Location = RickAndMorty.Infrastructure.Services.Response.Location;
 
 namespace RickAndMorty.Tests.Infrastructure.Services;

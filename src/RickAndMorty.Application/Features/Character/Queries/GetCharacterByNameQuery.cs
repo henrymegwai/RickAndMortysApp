@@ -5,7 +5,6 @@ using RickAndMorty.Application.Mapping;
 
 namespace RickAndMorty.Application.Features.Character.Queries;
 
-
 public record GetCharacterByNameQuery(string Name) : IRequest<CharacterDto>;
 
 public class GetCharacterByNameQueryHandler(ICharacterRepository characterRepository)

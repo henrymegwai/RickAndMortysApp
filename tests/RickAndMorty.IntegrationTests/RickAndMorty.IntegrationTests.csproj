@@ -25,7 +25,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\RickAndMorty.Persistence\RickAndMorty.Persistence.csproj" />
 	  <ProjectReference Include="..\..\src\RickAndMorty.WebApp\RickAndMorty.WebApp.csproj" />
 	</ItemGroup>
 

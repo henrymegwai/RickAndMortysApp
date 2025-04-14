@@ -23,8 +23,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\RickAndMorty.Application\RickAndMorty.Application.csproj" />
-      <ProjectReference Include="..\..\RickAndMorty.Infrastructure\RickAndMorty.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\RickAndMorty.Application\RickAndMorty.Application.csproj" />
+      <ProjectReference Include="..\..\src\RickAndMorty.Infrastructure\RickAndMorty.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

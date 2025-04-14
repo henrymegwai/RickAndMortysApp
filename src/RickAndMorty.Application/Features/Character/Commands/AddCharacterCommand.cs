@@ -2,7 +2,6 @@ using MediatR;
 using RickAndMorty.Application.Abstractions;
 using RickAndMorty.Application.Mapping;
 using RickAndMorty.Application.Models;
-using RickAndMorty.Data.Entities;
 
 namespace RickAndMorty.Application.Features.Character.Commands;
 

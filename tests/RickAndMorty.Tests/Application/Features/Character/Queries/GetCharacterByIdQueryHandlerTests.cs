@@ -2,6 +2,8 @@ using FluentAssertions;
 using NSubstitute;
 using RickAndMorty.Application.Abstractions;
 using RickAndMorty.Application.Features.Character.Queries;
+using RickAndMorty.Tests.Application.Features.Character.Command;
+using ICharacterRepository = RickAndMorty.Application.Abstractions.ICharacterRepository;
 
 namespace RickAndMorty.Tests.Application.Features.Character.Queries;
 

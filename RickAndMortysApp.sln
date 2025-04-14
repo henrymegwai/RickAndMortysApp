@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMortyConsoleApp", "RickAndMortyConsoleApp\RickAndMortyConsoleApp.csproj", "{B5E375FB-C6BF-49A5-BDC9-515AD62A07A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMortyConsoleApp", "src\RickAndMortyConsoleApp\RickAndMortyConsoleApp.csproj", "{B5E375FB-C6BF-49A5-BDC9-515AD62A07A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Data", "RickAndMorty.Data\RickAndMorty.Data.csproj", "{6B3A3801-65AD-4A5C-9D11-347B556B0112}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Data", "src\RickAndMorty.Data\RickAndMorty.Data.csproj", "{6B3A3801-65AD-4A5C-9D11-347B556B0112}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{161B38EA-4B1C-4CA4-9B54-8323450C06EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Infrastructure", "RickAndMorty.Infrastructure\RickAndMorty.Infrastructure.csproj", "{DE534DC7-058D-4D30-A213-3B5253E7A3BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Infrastructure", "src\RickAndMorty.Infrastructure\RickAndMorty.Infrastructure.csproj", "{DE534DC7-058D-4D30-A213-3B5253E7A3BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Application", "RickAndMorty.Application\RickAndMorty.Application.csproj", "{2219201D-4EE0-49D7-AFC6-6B6D02C2951C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Application", "src\RickAndMorty.Application\RickAndMorty.Application.csproj", "{2219201D-4EE0-49D7-AFC6-6B6D02C2951C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Persistence", "RickAndMorty.Persistence\RickAndMorty.Persistence.csproj", "{CC7B0BC0-5463-4037-8867-C1B37B4D8AD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RickAndMorty.Persistence", "src\RickAndMorty.Persistence\RickAndMorty.Persistence.csproj", "{CC7B0BC0-5463-4037-8867-C1B37B4D8AD1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9FD9C041-78D5-4A2D-AE79-108C07C844BA}"
 EndProject
