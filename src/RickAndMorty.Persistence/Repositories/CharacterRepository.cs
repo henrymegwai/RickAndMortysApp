@@ -73,7 +73,7 @@ public class CharacterRepository (ApplicationDbContext context, ILogger<Characte
         List<Character> listOfItems, 
         CancellationToken cancellationToken)
     {
-        if (!listOfItems.Any())
+        if (listOfItems.Count == 0)
         {
             return [];
         }

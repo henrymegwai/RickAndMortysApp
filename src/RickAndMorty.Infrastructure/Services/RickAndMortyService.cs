@@ -2,10 +2,8 @@ using System.Net.Http.Json;
 using Microsoft.Extensions.Logging;
 using RickAndMorty.Application.Abstractions;
 using RickAndMorty.Application.Common.Enums;
-using RickAndMorty.Data.Entities;
 using RickAndMorty.Infrastructure.Services.Response;
 using Character = RickAndMorty.Data.Entities.Character;
-using Location = RickAndMorty.Data.Entities.Location;
 
 namespace RickAndMorty.Infrastructure.Services;
 public class RickAndMortyService : IRickAndMortyService
@@ -52,7 +50,8 @@ public class RickAndMortyService : IRickAndMortyService
                         await _httpClient.GetFromJsonAsync<CharacterResponse>(nextPageUrl, cancellationToken);
 
                     var characters =
-                        response?.Results.Where(c => c.Status.Equals($"{characterStatus}", StringComparison.OrdinalIgnoreCase));
+                        response?.Results.Where(c => 
+                            c.Status.Equals($"{characterStatus}", StringComparison.OrdinalIgnoreCase));
  
                     if (characters != null)
                     {

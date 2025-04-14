@@ -6,9 +6,7 @@ using RickAndMorty.Application.Mapping;
 
 namespace RickAndMorty.Application.Features.Character.Queries;
 
-public record GetCharacterByStatusFromServiceQuery(CharacterStatus CharacterStatus) : IRequest<List<CharacterDto>>
-{
-}
+public record GetCharacterByStatusFromServiceQuery(CharacterStatus CharacterStatus) : IRequest<List<CharacterDto>>;
 
 public class GetCharacterByStatusQueryHandler(IRickAndMortyService rickAndMortyService)
     : IRequestHandler<GetCharacterByStatusFromServiceQuery, List<CharacterDto>>

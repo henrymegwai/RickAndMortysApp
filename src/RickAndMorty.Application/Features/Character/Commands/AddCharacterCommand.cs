@@ -7,15 +7,9 @@ namespace RickAndMorty.Application.Features.Character.Commands;
 
 public record AddCharacterCommand(CharacterModel CharacterModel) : IRequest<Unit>;
 
-public class AddCharacterCommandHandler : IRequestHandler<AddCharacterCommand, Unit>
+public class AddCharacterCommandHandler(ICharacterRepository characterRepository)
+    : IRequestHandler<AddCharacterCommand, Unit>
 {
-    private readonly ICharacterRepository _characterRepository;
-
-    public AddCharacterCommandHandler(ICharacterRepository characterRepository)
-    {
-        _characterRepository = characterRepository;
-    }
-
     public async Task<Unit> Handle(AddCharacterCommand request, CancellationToken cancellationToken)
     {
         return await HandleCreationOfCharacter(request.CharacterModel, cancellationToken);
@@ -26,7 +20,7 @@ public class AddCharacterCommandHandler : IRequestHandler<AddCharacterCommand, U
         CancellationToken cancellationToken)
     {
         var character = characterModel.MapToEntity();
-        await _characterRepository.AddAsync(character, cancellationToken);
+        await characterRepository.AddAsync(character, cancellationToken);
         return Unit.Value;
     }
 }
