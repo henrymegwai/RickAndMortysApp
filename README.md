@@ -34,3 +34,4 @@ Using the Command Line
 2.	Navigate to the RickAndMortyConsoleApp project directory:
    - cd src/RickAndMortyConsoleApp
    - dotnet run
+   - Operation completed successfully!
